@@ -1,3 +1,5 @@
+import math as m
+
 x = 0
 i = 1
 def prime(x):
