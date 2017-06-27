@@ -1,22 +1,15 @@
-def sum_evens():
-    a1 = 1
-    a2 = 2
-    sum = 0
+sum_evens = 2
 
-    while True:
-        if fibonacci(a1, a2) < 4000000:
-            if a2 % 2 == 0:
-                sum = sum + a2
+def fibonacci(a1, a2):
+    
+    global sum_evens
+    
+    if a1 + a2 > 4000000:
+        pass
 
-            # elif a2 % 2 == 0:
-            #     sum =  sum + a2
-        else:
-            break
-            
-        a3 = a1 + a2
-        a1 = a2
-        a2 = a3
-    return sum
-
-print(sum_evens())
-            
+    else:
+        if (a1+a2) % 2 == 0:
+            sum_evens = sum_evens + a1 + a2
+        fibonacci(a2, a2+a1)
+        
+    
